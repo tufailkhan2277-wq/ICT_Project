@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Tech Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Tech Store</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link active">Products</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="admin.html" class="nav-link">Admin Login</a></li>
+                <li class="cart-icon"><span id="cart-count">0</span> 🛒</li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="products-section">
+        <h1>Our Products</h1>
+        <div class="products-grid">
+            <div class="product-card" data-id="1" data-name="Wireless Headphones" data-price="29.99">
+                <img src="pictures/headphones.jpg" alt="Wireless Headphones" class="product-image">
+                <h3>Wireless Headphones</h3>
+                <p>High quality audio with noise cancellation.</p>
+                <span class="price">$29.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Smart Watch" data-price="49.99">
+                <img src="pictures/smart_watch.jfif" alt="Smart Watch" class="product-image">
+                <h3>Smart Watch</h3>
+                <p>Premium smartwatch with fitness tracking.</p>
+                <span class="price">$49.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="3" data-name="USB-C Cable" data-price="9.99">
+                <img src="pictures/c_cable.jfif" alt="USB-C Cable" class="product-image">
+                <h3>USB-C Cable</h3>
+                <p>Durable and fast charging cable.</p>
+                <span class="price">$9.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="4" data-name="Laptop Stand" data-price="39.99">
+                <img src="pictures/laptop_stand.jfif" alt="Laptop Stand" class="product-image">
+                <h3>Laptop Stand</h3>
+                <p>Ergonomic stand for better posture.</p>
+                <span class="price">$39.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="5" data-name="Mechanical Keyboard" data-price="79.99">
+                <img src="pictures/keyboard.jpg" alt="Mechanical Keyboard" class="product-image">
+                <h3>Mechanical Keyboard</h3>
+                <p>Professional grade keyboard with RGB lighting.</p>
+                <span class="price">$79.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="6" data-name="Wireless Mouse" data-price="24.99">
+                <img src="pictures/mouse.jpg" alt="Wireless Mouse" class="product-image">
+                <h3>Wireless Mouse</h3>
+                <p>Precision mouse with long battery life.</p>
+                <span class="price">$24.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="7" data-name="4K Webcam" data-price="89.99">
+                <img src="pictures/webcam.jpg" alt="4K Webcam" class="product-image">
+                <h3>4K Webcam</h3>
+                <p>Ultra HD webcam for streaming and video calls.</p>
+                <span class="price">$89.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="8" data-name="Phone Case" data-price="14.99">
+                <img src="pictures/phone_case.jpg" alt="Phone Case" class="product-image">
+                <h3>Phone Case</h3>
+                <p>Durable protective case with design.</p>
+                <span class="price">$14.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="9" data-name="Screen Protector" data-price="7.99">
+                <img src="pictures/screen_protector.jpg" alt="Screen Protector" class="product-image">
+                <h3>Screen Protector</h3>
+                <p>Tempered glass protection for your device.</p>
+                <span class="price">$7.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="10" data-name="Power Bank" data-price="34.99">
+                <img src="pictures/power_bank.jpg" alt="Power Bank" class="product-image">
+                <h3>Power Bank</h3>
+                <p>20000mAh portable charger with fast charging.</p>
+                <span class="price">$34.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="11" data-name="Phone Mount" data-price="12.99">
+                <img src="pictures/phone_mount.jpg" alt="Phone Mount" class="product-image">
+                <h3>Phone Mount</h3>
+                <p>Universal car phone mount holder.</p>
+                <span class="price">$12.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="12" data-name="Portable Speaker" data-price="44.99">
+                <img src="pictures/speaker.jpg" alt="Portable Speaker" class="product-image">
+                <h3>Portable Speaker</h3>
+                <p>Waterproof Bluetooth speaker with great sound.</p>
+                <span class="price">$44.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: $<span id="cart-total">0</span></h3>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tech Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

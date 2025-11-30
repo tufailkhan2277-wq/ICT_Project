@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Tech Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div class="admin-login" id="login-screen">
+        <div class="login-form">
+            <h2>Admin Login</h2>
+            <input type="password" id="admin-password" placeholder="Enter Password">
+            <button onclick="checkAdminLogin()">Login</button>
+        </div>
+    </div>
+
+    <!-- Main Admin Container -->
+    <div class="admin-container" id="admin-container" style="display: none;">
+        <!-- Header with Navigation -->
+        <header class="admin-header">
+            <nav class="admin-nav">
+                <a href="#" onclick="showDashboard(); return false;" id="dashboard-tab" class="active">Dashboard</a>
+                <a href="#" onclick="showSales(); return false;" id="sales-tab">Sales</a>
+            </nav>
+            <h1 id="page-title">Admin Dashboard</h1>
+            <button onclick="logout()">Logout</button>
+        </header>
+
+        <!-- Dashboard Section -->
+        <div class="admin-content">
+            <div id="dashboard-section">
+                <!-- Stats Cards -->
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>Total Orders</h3>
+                        <h2 id="total-orders">0</h2>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pending</h3>
+                        <h2 id="pending-orders">0</h2>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Approved</h3>
+                        <h2 id="approved-orders">0</h2>
+                    </div>
+                </div>
+
+                <!-- Orders List -->
+                <div class="orders-section">
+                    <h2>Recent Orders</h2>
+                    <div id="orders-list"></div>
+                </div>
+            </div>
+
+            <!-- Sales Section -->
+            <div id="sales-section" style="display: none;">
+                <h2>Sales Overview</h2>
+                <canvas id="salesChart" width="600" height="300" style="background:#fff; border:1px solid #ccc; border-radius:10px; display:block; margin: 20px auto;"></canvas>
+                <div class="sales-summary">
+                    <h3>Approved Sales Summary</h3>
+                    <div id="sales-products"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
